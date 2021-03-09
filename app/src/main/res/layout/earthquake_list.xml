@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/magnitude"
@@ -17,15 +17,14 @@
         tools:text="7.2" />
 
     <TextView
-        android:id="@+id/location"
+        android:id="@+id/primary_location"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:textSize="16sp"
-        app:layout_constraintEnd_toStartOf="@+id/date"
-        app:layout_constraintStart_toEndOf="@+id/magnitude"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:text="San Francisco" />
+        app:layout_constraintEnd_toEndOf="@+id/location_offset"
+        app:layout_constraintStart_toStartOf="@+id/location_offset"
+        app:layout_constraintTop_toBottomOf="@+id/location_offset"
+        tools:text="Rumio, Japan" />
 
     <TextView
         android:id="@+id/date"
@@ -37,4 +36,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Mar 03, 2021" />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="@+id/date"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/date"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        tools:text="3:00 PM" />
+
+    <TextView
+        android:id="@+id/location_offset"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/date"
+        app:layout_constraintStart_toEndOf="@+id/magnitude"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="74km NW Of" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
