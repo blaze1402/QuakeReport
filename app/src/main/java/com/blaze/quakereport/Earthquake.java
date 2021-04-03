@@ -16,12 +16,12 @@ public class Earthquake {
     private final String mLocation;
 
     /**
-     * Date of the Earthquake
+     * Date & Time of the Earthquake
      */
     private final long mTimeInMilliseconds;
 
     /**
-     * Location of the Earthquake
+     * URL of the Earthquake
      */
     private final String mUrl;
 
@@ -36,7 +36,7 @@ public class Earthquake {
         mMagnitude = magnitude;
         mLocation = location;
         mTimeInMilliseconds = timeInMilliseconds;
-        mUrl =url;
+        mUrl = url;
     }
 
     /**
